@@ -1,0 +1,23 @@
+<div id="{{autocompleteCtrl.id + '-container'}}" class="col-sm-12 autocomplete-container">
+    <input 
+    	id="{{'autocomplete-' + autocompleteCtrl.id}}"
+    	ng-model="autocompleteCtrl.input" 
+		name="{{'autocomplete-' + autocompleteCtrl.id}}" 
+		type="text" 
+		class="autocomplete" 
+		autocomplete="off" 
+		ng-keydown="autocompleteCtrl.onKeyDown($event)"
+		ng-keyup="autocompleteCtrl.onKeyUp($event)"
+		ng-focus="autocompleteCtrl.onFocus()"    		
+		ng-change="autocompleteCtrl.optionIndex = -1"/>
+	<div class="autocomplete-suggestions" ng-show="autocompleteCtrl.showSuggestions" >
+		<div class="autocomplete-suggestion" 
+			ng-class="{'focus': $index == autocompleteCtrl.optionIndex}"
+			ng-repeat="option in autocompleteCtrl.tempLookup = ( (autocompleteCtrl.navigateLookup = autocompleteCtrl.lookup | filter:autocompleteCtrl.input) | limitTo:autocompleteCtrl.currentLimit)">
+			
+			<p class='' data-id={{option.id}} ng-click="autocompleteCtrl.select(option)" ng-bind-html="option.name | formatResult:option.name:autocompleteCtrl.input">			
+			</p>	
+
+		</div>	
+	</div>
+</div>	

@@ -1,0 +1,30 @@
+.autocomplete-container{
+	width: 100%;
+	max-width: 200px;
+}
+.autocomplete-suggestions{
+	width: 100%;
+	max-height: 200px;
+    border: 1px solid #dcdcdc;
+    border-top: none;
+    overflow-y: scroll;
+}
+.autocomplete-suggestion{
+    border-bottom: 1px solid grey;
+    cursor:pointer;
+}
+.autocomplete-suggestion:last-child{
+    border-bottom: none;
+}
+.autocomplete-suggestion:hover,.autocomplete-suggestion.focus{
+    background: #e8e8e8;
+}
+.autocomplete-suggestion p{
+    height: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.autocomplete-suggestion p strong{
+    color:#52a738;
+}
