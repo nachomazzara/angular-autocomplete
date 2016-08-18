@@ -1,11 +1,13 @@
 <div id="{{autocompleteCtrl.id + '-container'}}" class="col-sm-12 autocomplete-container">
     <input 
     	id="{{'autocomplete-' + autocompleteCtrl.id}}"
-    	ng-model="autocompleteCtrl.input" 
+    	placeholder="Animal"
 		name="{{'autocomplete-' + autocompleteCtrl.id}}" 
 		type="text" 
 		class="autocomplete" 
 		autocomplete="off" 
+    	ng-title="autocompleteCtrl.input"
+    	ng-model="autocompleteCtrl.input" 
 		ng-keydown="autocompleteCtrl.onKeyDown($event)"
 		ng-keyup="autocompleteCtrl.onKeyUp($event)"
 		ng-focus="autocompleteCtrl.onFocus()"    		
@@ -13,9 +15,9 @@
 	<div class="autocomplete-suggestions" ng-show="autocompleteCtrl.showSuggestions" >
 		<div class="autocomplete-suggestion" 
 			ng-class="{'focus': $index == autocompleteCtrl.optionIndex}"
-			ng-repeat="option in autocompleteCtrl.tempLookup = ( (autocompleteCtrl.navigateLookup = autocompleteCtrl.lookup | filter:autocompleteCtrl.input) | limitTo:autocompleteCtrl.currentLimit)">
+			ng-repeat="option in autocompleteCtrl.tempLookup = ( (autocompleteCtrl.navigateLookup = autocompleteCtrl.lookup | filter: { name: autocompleteCtrl.input }) | limitTo:autocompleteCtrl.currentLimit)">
 			
-			<p class='' data-id={{option.id}} ng-click="autocompleteCtrl.select(option)" ng-bind-html="option.name | formatResult:option.name:autocompleteCtrl.input">			
+			<p class='' ng-title="{{option.name}}" data-id={{option.id}} ng-click="autocompleteCtrl.select(option)" ng-bind-html="option.name | formatResult:option.name:autocompleteCtrl.input">			
 			</p>	
 
 		</div>	

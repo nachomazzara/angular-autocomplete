@@ -25,9 +25,8 @@
 	})
 	.filter('formatResult', ['$sce', function ($sce) {
 	 	function escapeRegExChars(value) {
-         	return value.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-     	};
-
+         	return value.replace(/[\-\[\]\/\{\}\(\)\*\+\&\$\!\'\?\.\\\^\$\|]/g, "\\$&");
+   	}
 		return function (item,str,find) {
 			if(find === undefined || find.length == 0){
 				return str;
@@ -117,7 +116,7 @@
 					break;
 			 	default:
 				 	autocompleteCtrl.showSuggestions = true;
-					break;;
+					break;
 			}
 		};
 
@@ -213,7 +212,7 @@
 
 	    function getLookup() {
 	        return $http.get('data/test-data.json')
-	            .then(function(response) {
+	           .then(function(response) {
 	                autocompleteCtrl.lookup = response.data;
 	                return autocompleteCtrl.lookup;
 	            },function(err){

@@ -1,19 +1,19 @@
 [
 	{
 		"id":"1"
-		,"name": "dog"
+		,"name": "Dog"
 	}
 	,{
 		"id":"2"
-		,"name": "cat"
+		,"name": "Cat"
 	}
 	,{
 		"id":"3"
-		,"name": "bird"
+		,"name": "Bird"
 	}
 	,{
 		"id":"4"
-		,"name": "parrot"
+		,"name": "Parrot"
 	}
 	,{
 		"id":"5"
@@ -21,50 +21,54 @@
 	}
 	,{
 		"id":"6"
-		,"name": "shark"
+		,"name": "Shark"
 	}
 	,{
 		"id":"7"
-		,"name": "whale"
+		,"name": "Whale"
 	}
 	,{
 		"id":"8"
-		,"name": "dolphin"
+		,"name": "Dolphin"
 	}
 	,{
 		"id":"9"
-		,"name": "jirafe"
+		,"name": "Jirafe"
 	}
 	,{
 		"id":"10"
-		,"name": "zebra"
+		,"name": "Zebra"
 	}
 	,{
 		"id":"11"
-		,"name": "elephant"
+		,"name": "Elephant"
 	}
 	,{
 		"id":"12"
-		,"name": "monkey"
+		,"name": "Monkey"
 	}
 	,{
 		"id":"13"
-		,"name": "crocodile"
+		,"name": "Crocodile"
 	}
 	,{
 		"id":"14"
-		,"name": "lizard"
+		,"name": "Lizard"
 	}
 	,{
 		"id":"15"
-		,"name": "tucan"
+		,"name": "Tucan"
 	}
 	,{
 		"id":"16"
-		,"name": "lion"
+		,"name": "Lion"
 	}
 	,{
 		"id":"17"
-		,"name": "tiger"
+		,"name": "Tiger"
+	}
+	,{
+		"id":"17"
+		,"name": "#|+´+[]{}?!<$%&/>br()=¡@>$!#'"
 	}
 ]
