@@ -1,0 +1,45 @@
+.autocomplete-container{
+    width: 100%;
+    max-width: 200px;
+}
+input[type="text"].autocomplete{
+  border: none;
+  border-bottom : 1px solid rgb(224, 224, 224);
+  font-size:16px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+input[type="text"].autocomplete:focus , input[type="text"].autocomplete:active {
+  outline:none;
+}
+.autocomplete-suggestions{
+    width: 100%;
+    max-height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  border-top: none;
+  overflow-y: auto;
+}
+.autocomplete-suggestion{
+    cursor:pointer;
+    transition: background .15s linear;
+}
+.autocomplete-suggestion:last-child{
+    border-bottom: none;
+}
+.autocomplete-suggestion:hover,.autocomplete-suggestion.focus{
+    background: #eaeaea;
+}
+.autocomplete-suggestion p{
+    margin: 0;
+    padding: 10px 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.autocomplete-suggestion p strong{
+    color: rgb(0, 188, 212);
+    font-weight:400;
+}
